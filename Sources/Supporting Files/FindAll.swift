@@ -1,0 +1,19 @@
+//
+//  FindAll.swift
+//  FetchKit
+//
+//  Created by Anton Agarunov on 22.04.17.
+//
+//
+
+import CoreData
+import Foundation
+
+open class findAll<ModelType: NSManagedObject>: FetchRequest<ModelType> {
+    
+    open func execute(in context: NSManagedObjectContext) throws -> [ModelType] {
+        let request: NSFetchRequest<ModelType> = fetchRequest()
+        return try context.fetch(request)
+    }
+    
+}
