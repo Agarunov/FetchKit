@@ -13,6 +13,10 @@
 		3A7336621EABBD6E0008D591 /* FetchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7336191EABB70B0008D591 /* FetchKit.framework */; };
 		3A7336711EABBD8F0008D591 /* FetchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7336341EABB7350008D591 /* FetchKit.framework */; };
 		3A7336A91EABC4BC0008D591 /* FetchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7336971EABC4790008D591 /* FetchKit.framework */; };
+		3A7336BB1EABCB250008D591 /* FetchKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336BA1EABCB250008D591 /* FetchKit.swift */; };
+		3A7336BC1EABCB250008D591 /* FetchKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336BA1EABCB250008D591 /* FetchKit.swift */; };
+		3A7336BD1EABCB250008D591 /* FetchKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336BA1EABCB250008D591 /* FetchKit.swift */; };
+		3A7336BE1EABCB250008D591 /* FetchKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336BA1EABCB250008D591 /* FetchKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,7 @@
 		3A7336861EABBE1E0008D591 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A7336971EABC4790008D591 /* FetchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FetchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7336A41EABC4BC0008D591 /* FetchKit macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FetchKit macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A7336BA1EABCB250008D591 /* FetchKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +149,7 @@
 			children = (
 				3A73364B1EABB9580008D591 /* FetchKit.h */,
 				3A73364C1EABB9580008D591 /* Info.plist */,
+				3A7336BA1EABCB250008D591 /* FetchKit.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -197,6 +203,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A73361F1EABB70B0008D591 /* Build configuration list for PBXNativeTarget "FetchKit iOS" */;
 			buildPhases = (
+				3A7336B21EABC9940008D591 /* SwiftLint */,
 				3A7336141EABB70B0008D591 /* Sources */,
 				3A7336151EABB70B0008D591 /* Frameworks */,
 				3A7336161EABB70B0008D591 /* Headers */,
@@ -215,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A73362C1EABB7250008D591 /* Build configuration list for PBXNativeTarget "FetchKit watchOS" */;
 			buildPhases = (
+				3A7336B51EABC9FF0008D591 /* SwiftLint */,
 				3A7336221EABB7250008D591 /* Sources */,
 				3A7336231EABB7250008D591 /* Frameworks */,
 				3A7336241EABB7250008D591 /* Headers */,
@@ -233,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A7336391EABB7350008D591 /* Build configuration list for PBXNativeTarget "FetchKit tvOS" */;
 			buildPhases = (
+				3A7336B61EABCA100008D591 /* SwiftLint */,
 				3A73362F1EABB7350008D591 /* Sources */,
 				3A7336301EABB7350008D591 /* Frameworks */,
 				3A7336311EABB7350008D591 /* Headers */,
@@ -251,6 +260,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A7336651EABBD6E0008D591 /* Build configuration list for PBXNativeTarget "FetchKit iOS Tests" */;
 			buildPhases = (
+				3A7336B41EABC9C20008D591 /* SwiftLint */,
 				3A7336591EABBD6E0008D591 /* Sources */,
 				3A73365A1EABBD6E0008D591 /* Frameworks */,
 				3A73365B1EABBD6E0008D591 /* Resources */,
@@ -269,6 +279,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A7336741EABBD8F0008D591 /* Build configuration list for PBXNativeTarget "FetchKit tvOS Tests" */;
 			buildPhases = (
+				3A7336B71EABCA200008D591 /* SwiftLint */,
 				3A7336681EABBD8F0008D591 /* Sources */,
 				3A7336691EABBD8F0008D591 /* Frameworks */,
 				3A73366A1EABBD8F0008D591 /* Resources */,
@@ -287,6 +298,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A73369C1EABC4790008D591 /* Build configuration list for PBXNativeTarget "FetchKit macOS" */;
 			buildPhases = (
+				3A7336B81EABCA480008D591 /* SwiftLint */,
 				3A7336921EABC4790008D591 /* Sources */,
 				3A7336931EABC4790008D591 /* Frameworks */,
 				3A7336941EABC4790008D591 /* Headers */,
@@ -305,6 +317,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A7336AC1EABC4BC0008D591 /* Build configuration list for PBXNativeTarget "FetchKit macOS Tests" */;
 			buildPhases = (
+				3A7336B91EABCA570008D591 /* SwiftLint */,
 				3A7336A01EABC4BC0008D591 /* Sources */,
 				3A7336A11EABC4BC0008D591 /* Frameworks */,
 				3A7336A21EABC4BC0008D591 /* Resources */,
@@ -361,6 +374,7 @@
 					3A7336961EABC4790008D591 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 3U5D4HFU5U;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					3A7336A31EABC4BC0008D591 = {
@@ -445,11 +459,113 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A7336B21EABC9940008D591 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		3A7336B41EABC9C20008D591 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		3A7336B51EABC9FF0008D591 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		3A7336B61EABCA100008D591 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		3A7336B71EABCA200008D591 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		3A7336B81EABCA480008D591 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		3A7336B91EABCA570008D591 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A7336141EABB70B0008D591 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A7336BB1EABCB250008D591 /* FetchKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +573,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A7336BC1EABCB250008D591 /* FetchKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +581,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A7336BD1EABCB250008D591 /* FetchKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A7336BE1EABCB250008D591 /* FetchKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,6 +1038,7 @@
 		3A7336661EABBD6E0008D591 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -975,6 +1095,7 @@
 		3A7336671EABBD6E0008D591 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1024,6 +1145,7 @@
 		3A7336751EABBD8F0008D591 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1079,6 +1201,7 @@
 		3A7336761EABBD8F0008D591 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1253,6 +1376,7 @@
 		3A7336AD1EABC4BC0008D591 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1310,6 +1434,7 @@
 		3A7336AE1EABC4BC0008D591 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
