@@ -17,10 +17,6 @@
 		3A7336BC1EABCB250008D591 /* FetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336BA1EABCB250008D591 /* FetchRequest.swift */; };
 		3A7336BD1EABCB250008D591 /* FetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336BA1EABCB250008D591 /* FetchRequest.swift */; };
 		3A7336BE1EABCB250008D591 /* FetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336BA1EABCB250008D591 /* FetchRequest.swift */; };
-		3A7336C01EABD7F90008D591 /* NSEntityDescription+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336BF1EABD7F90008D591 /* NSEntityDescription+Extension.swift */; };
-		3A7336C11EABD7F90008D591 /* NSEntityDescription+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336BF1EABD7F90008D591 /* NSEntityDescription+Extension.swift */; };
-		3A7336C21EABD7F90008D591 /* NSEntityDescription+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336BF1EABD7F90008D591 /* NSEntityDescription+Extension.swift */; };
-		3A7336C31EABD7F90008D591 /* NSEntityDescription+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336BF1EABD7F90008D591 /* NSEntityDescription+Extension.swift */; };
 		3A7336C51EABD8E90008D591 /* NSManagedObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336C41EABD8E90008D591 /* NSManagedObject+Extension.swift */; };
 		3A7336C61EABD8E90008D591 /* NSManagedObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336C41EABD8E90008D591 /* NSManagedObject+Extension.swift */; };
 		3A7336C71EABD8E90008D591 /* NSManagedObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336C41EABD8E90008D591 /* NSManagedObject+Extension.swift */; };
@@ -37,10 +33,10 @@
 		3A7336D61EABF9390008D591 /* FindRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336D41EABF9390008D591 /* FindRange.swift */; };
 		3A7336D71EABF9390008D591 /* FindRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336D41EABF9390008D591 /* FindRange.swift */; };
 		3A7336D81EABF9390008D591 /* FindRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336D41EABF9390008D591 /* FindRange.swift */; };
-		3A7336DA1EABF9AD0008D591 /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336D91EABF9AD0008D591 /* Count.swift */; };
-		3A7336DB1EABF9AD0008D591 /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336D91EABF9AD0008D591 /* Count.swift */; };
-		3A7336DC1EABF9AD0008D591 /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336D91EABF9AD0008D591 /* Count.swift */; };
-		3A7336DD1EABF9AD0008D591 /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336D91EABF9AD0008D591 /* Count.swift */; };
+		3A7336DA1EABF9AD0008D591 /* GetCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336D91EABF9AD0008D591 /* GetCount.swift */; };
+		3A7336DB1EABF9AD0008D591 /* GetCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336D91EABF9AD0008D591 /* GetCount.swift */; };
+		3A7336DC1EABF9AD0008D591 /* GetCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336D91EABF9AD0008D591 /* GetCount.swift */; };
+		3A7336DD1EABF9AD0008D591 /* GetCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336D91EABF9AD0008D591 /* GetCount.swift */; };
 		3A7336DF1EABFA020008D591 /* Aggregate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336DE1EABFA020008D591 /* Aggregate.swift */; };
 		3A7336E01EABFA020008D591 /* Aggregate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336DE1EABFA020008D591 /* Aggregate.swift */; };
 		3A7336E11EABFA020008D591 /* Aggregate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336DE1EABFA020008D591 /* Aggregate.swift */; };
@@ -53,6 +49,36 @@
 		3A7336EA1EADEE0E0008D591 /* FetchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336E81EADEE0E0008D591 /* FetchResults.swift */; };
 		3A7336EB1EADEE0E0008D591 /* FetchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336E81EADEE0E0008D591 /* FetchResults.swift */; };
 		3A7336EC1EADEE0E0008D591 /* FetchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336E81EADEE0E0008D591 /* FetchResults.swift */; };
+		3A7336EF1EAF70EE0008D591 /* FetchKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336EE1EAF70EE0008D591 /* FetchKitTests.swift */; };
+		3A7336F01EAF70EE0008D591 /* FetchKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336EE1EAF70EE0008D591 /* FetchKitTests.swift */; };
+		3A7336F11EAF70EE0008D591 /* FetchKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336EE1EAF70EE0008D591 /* FetchKitTests.swift */; };
+		3A7336F31EAF76C90008D591 /* FetchRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336F21EAF76C80008D591 /* FetchRequestTests.swift */; };
+		3A7336F41EAF76C90008D591 /* FetchRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336F21EAF76C80008D591 /* FetchRequestTests.swift */; };
+		3A7336F51EAF76C90008D591 /* FetchRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7336F21EAF76C80008D591 /* FetchRequestTests.swift */; };
+		3A97734A1EAF9A6C00C7C8BD /* FindFirstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773491EAF9A6C00C7C8BD /* FindFirstTests.swift */; };
+		3A97734C1EAF9A7200C7C8BD /* FindFirstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773491EAF9A6C00C7C8BD /* FindFirstTests.swift */; };
+		3A97734D1EAF9A7300C7C8BD /* FindFirstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773491EAF9A6C00C7C8BD /* FindFirstTests.swift */; };
+		3A97734F1EAF9D4300C7C8BD /* FindAllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97734E1EAF9D4300C7C8BD /* FindAllTests.swift */; };
+		3A9773501EAF9D4300C7C8BD /* FindAllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97734E1EAF9D4300C7C8BD /* FindAllTests.swift */; };
+		3A9773511EAF9D4300C7C8BD /* FindAllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97734E1EAF9D4300C7C8BD /* FindAllTests.swift */; };
+		3A9773531EAF9E2E00C7C8BD /* FindRangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773521EAF9E2E00C7C8BD /* FindRangeTests.swift */; };
+		3A9773541EAF9E2E00C7C8BD /* FindRangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773521EAF9E2E00C7C8BD /* FindRangeTests.swift */; };
+		3A9773551EAF9E2E00C7C8BD /* FindRangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773521EAF9E2E00C7C8BD /* FindRangeTests.swift */; };
+		3A9773571EAFA0BD00C7C8BD /* DeleteAllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773561EAFA0BD00C7C8BD /* DeleteAllTests.swift */; };
+		3A9773581EAFA0BD00C7C8BD /* DeleteAllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773561EAFA0BD00C7C8BD /* DeleteAllTests.swift */; };
+		3A9773591EAFA0BD00C7C8BD /* DeleteAllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773561EAFA0BD00C7C8BD /* DeleteAllTests.swift */; };
+		3A97735B1EAFAFB800C7C8BD /* GetCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97735A1EAFAFB800C7C8BD /* GetCountTests.swift */; };
+		3A97735C1EAFAFB800C7C8BD /* GetCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97735A1EAFAFB800C7C8BD /* GetCountTests.swift */; };
+		3A97735D1EAFAFB800C7C8BD /* GetCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97735A1EAFAFB800C7C8BD /* GetCountTests.swift */; };
+		3A97735F1EAFB09100C7C8BD /* AggregateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97735E1EAFB09100C7C8BD /* AggregateTests.swift */; };
+		3A9773601EAFB09100C7C8BD /* AggregateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97735E1EAFB09100C7C8BD /* AggregateTests.swift */; };
+		3A9773611EAFB09100C7C8BD /* AggregateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97735E1EAFB09100C7C8BD /* AggregateTests.swift */; };
+		3A9773631EAFB6C700C7C8BD /* FetchResultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773621EAFB6C700C7C8BD /* FetchResultsTests.swift */; };
+		3A9773641EAFB6C700C7C8BD /* FetchResultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773621EAFB6C700C7C8BD /* FetchResultsTests.swift */; };
+		3A9773651EAFB6C700C7C8BD /* FetchResultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773621EAFB6C700C7C8BD /* FetchResultsTests.swift */; };
+		3A9773671EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773661EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift */; };
+		3A9773681EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773661EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift */; };
+		3A9773691EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9773661EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,15 +117,24 @@
 		3A7336971EABC4790008D591 /* FetchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FetchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7336A41EABC4BC0008D591 /* FetchKit macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FetchKit macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7336BA1EABCB250008D591 /* FetchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchRequest.swift; sourceTree = "<group>"; };
-		3A7336BF1EABD7F90008D591 /* NSEntityDescription+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSEntityDescription+Extension.swift"; sourceTree = "<group>"; };
 		3A7336C41EABD8E90008D591 /* NSManagedObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extension.swift"; sourceTree = "<group>"; };
 		3A7336CA1EABF8B80008D591 /* FindFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindFirst.swift; sourceTree = "<group>"; };
 		3A7336CF1EABF9110008D591 /* FindAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindAll.swift; sourceTree = "<group>"; };
 		3A7336D41EABF9390008D591 /* FindRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindRange.swift; sourceTree = "<group>"; };
-		3A7336D91EABF9AD0008D591 /* Count.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Count.swift; sourceTree = "<group>"; };
+		3A7336D91EABF9AD0008D591 /* GetCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCount.swift; sourceTree = "<group>"; };
 		3A7336DE1EABFA020008D591 /* Aggregate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aggregate.swift; sourceTree = "<group>"; };
 		3A7336E31EACD6730008D591 /* DeleteAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteAll.swift; sourceTree = "<group>"; };
 		3A7336E81EADEE0E0008D591 /* FetchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchResults.swift; sourceTree = "<group>"; };
+		3A7336EE1EAF70EE0008D591 /* FetchKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchKitTests.swift; sourceTree = "<group>"; };
+		3A7336F21EAF76C80008D591 /* FetchRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchRequestTests.swift; sourceTree = "<group>"; };
+		3A9773491EAF9A6C00C7C8BD /* FindFirstTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindFirstTests.swift; sourceTree = "<group>"; };
+		3A97734E1EAF9D4300C7C8BD /* FindAllTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindAllTests.swift; sourceTree = "<group>"; };
+		3A9773521EAF9E2E00C7C8BD /* FindRangeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindRangeTests.swift; sourceTree = "<group>"; };
+		3A9773561EAFA0BD00C7C8BD /* DeleteAllTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteAllTests.swift; sourceTree = "<group>"; };
+		3A97735A1EAFAFB800C7C8BD /* GetCountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCountTests.swift; sourceTree = "<group>"; };
+		3A97735E1EAFB09100C7C8BD /* AggregateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregateTests.swift; sourceTree = "<group>"; };
+		3A9773621EAFB6C700C7C8BD /* FetchResultsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchResultsTests.swift; sourceTree = "<group>"; };
+		3A9773661EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObjectExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,10 +234,9 @@
 				3A7336CF1EABF9110008D591 /* FindAll.swift */,
 				3A7336D41EABF9390008D591 /* FindRange.swift */,
 				3A7336E31EACD6730008D591 /* DeleteAll.swift */,
-				3A7336D91EABF9AD0008D591 /* Count.swift */,
+				3A7336D91EABF9AD0008D591 /* GetCount.swift */,
 				3A7336DE1EABFA020008D591 /* Aggregate.swift */,
 				3A7336E81EADEE0E0008D591 /* FetchResults.swift */,
-				3A7336BF1EABD7F90008D591 /* NSEntityDescription+Extension.swift */,
 				3A7336C41EABD8E90008D591 /* NSManagedObject+Extension.swift */,
 			);
 			path = "Supporting Files";
@@ -212,6 +246,16 @@
 			isa = PBXGroup;
 			children = (
 				3A7336861EABBE1E0008D591 /* Info.plist */,
+				3A7336EE1EAF70EE0008D591 /* FetchKitTests.swift */,
+				3A7336F21EAF76C80008D591 /* FetchRequestTests.swift */,
+				3A9773491EAF9A6C00C7C8BD /* FindFirstTests.swift */,
+				3A97734E1EAF9D4300C7C8BD /* FindAllTests.swift */,
+				3A9773521EAF9E2E00C7C8BD /* FindRangeTests.swift */,
+				3A9773561EAFA0BD00C7C8BD /* DeleteAllTests.swift */,
+				3A97735A1EAFAFB800C7C8BD /* GetCountTests.swift */,
+				3A97735E1EAFB09100C7C8BD /* AggregateTests.swift */,
+				3A9773621EAFB6C700C7C8BD /* FetchResultsTests.swift */,
+				3A9773661EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -623,9 +667,8 @@
 				3A7336D51EABF9390008D591 /* FindRange.swift in Sources */,
 				3A7336DF1EABFA020008D591 /* Aggregate.swift in Sources */,
 				3A7336C51EABD8E90008D591 /* NSManagedObject+Extension.swift in Sources */,
-				3A7336C01EABD7F90008D591 /* NSEntityDescription+Extension.swift in Sources */,
 				3A7336D01EABF9110008D591 /* FindAll.swift in Sources */,
-				3A7336DA1EABF9AD0008D591 /* Count.swift in Sources */,
+				3A7336DA1EABF9AD0008D591 /* GetCount.swift in Sources */,
 				3A7336BB1EABCB250008D591 /* FetchRequest.swift in Sources */,
 				3A7336E91EADEE0E0008D591 /* FetchResults.swift in Sources */,
 				3A7336CB1EABF8B80008D591 /* FindFirst.swift in Sources */,
@@ -640,9 +683,8 @@
 				3A7336D61EABF9390008D591 /* FindRange.swift in Sources */,
 				3A7336E01EABFA020008D591 /* Aggregate.swift in Sources */,
 				3A7336C61EABD8E90008D591 /* NSManagedObject+Extension.swift in Sources */,
-				3A7336C11EABD7F90008D591 /* NSEntityDescription+Extension.swift in Sources */,
 				3A7336D11EABF9110008D591 /* FindAll.swift in Sources */,
-				3A7336DB1EABF9AD0008D591 /* Count.swift in Sources */,
+				3A7336DB1EABF9AD0008D591 /* GetCount.swift in Sources */,
 				3A7336BC1EABCB250008D591 /* FetchRequest.swift in Sources */,
 				3A7336EA1EADEE0E0008D591 /* FetchResults.swift in Sources */,
 				3A7336CC1EABF8B80008D591 /* FindFirst.swift in Sources */,
@@ -657,9 +699,8 @@
 				3A7336D71EABF9390008D591 /* FindRange.swift in Sources */,
 				3A7336E11EABFA020008D591 /* Aggregate.swift in Sources */,
 				3A7336C71EABD8E90008D591 /* NSManagedObject+Extension.swift in Sources */,
-				3A7336C21EABD7F90008D591 /* NSEntityDescription+Extension.swift in Sources */,
 				3A7336D21EABF9110008D591 /* FindAll.swift in Sources */,
-				3A7336DC1EABF9AD0008D591 /* Count.swift in Sources */,
+				3A7336DC1EABF9AD0008D591 /* GetCount.swift in Sources */,
 				3A7336BD1EABCB250008D591 /* FetchRequest.swift in Sources */,
 				3A7336EB1EADEE0E0008D591 /* FetchResults.swift in Sources */,
 				3A7336CD1EABF8B80008D591 /* FindFirst.swift in Sources */,
@@ -671,6 +712,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9773571EAFA0BD00C7C8BD /* DeleteAllTests.swift in Sources */,
+				3A97735F1EAFB09100C7C8BD /* AggregateTests.swift in Sources */,
+				3A97735B1EAFAFB800C7C8BD /* GetCountTests.swift in Sources */,
+				3A9773671EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift in Sources */,
+				3A97734A1EAF9A6C00C7C8BD /* FindFirstTests.swift in Sources */,
+				3A9773531EAF9E2E00C7C8BD /* FindRangeTests.swift in Sources */,
+				3A7336F31EAF76C90008D591 /* FetchRequestTests.swift in Sources */,
+				3A97734F1EAF9D4300C7C8BD /* FindAllTests.swift in Sources */,
+				3A7336EF1EAF70EE0008D591 /* FetchKitTests.swift in Sources */,
+				3A9773631EAFB6C700C7C8BD /* FetchResultsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +729,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9773581EAFA0BD00C7C8BD /* DeleteAllTests.swift in Sources */,
+				3A9773601EAFB09100C7C8BD /* AggregateTests.swift in Sources */,
+				3A97735C1EAFAFB800C7C8BD /* GetCountTests.swift in Sources */,
+				3A9773681EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift in Sources */,
+				3A97734C1EAF9A7200C7C8BD /* FindFirstTests.swift in Sources */,
+				3A9773541EAF9E2E00C7C8BD /* FindRangeTests.swift in Sources */,
+				3A7336F41EAF76C90008D591 /* FetchRequestTests.swift in Sources */,
+				3A9773501EAF9D4300C7C8BD /* FindAllTests.swift in Sources */,
+				3A7336F01EAF70EE0008D591 /* FetchKitTests.swift in Sources */,
+				3A9773641EAFB6C700C7C8BD /* FetchResultsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,9 +749,8 @@
 				3A7336D81EABF9390008D591 /* FindRange.swift in Sources */,
 				3A7336E21EABFA020008D591 /* Aggregate.swift in Sources */,
 				3A7336C81EABD8E90008D591 /* NSManagedObject+Extension.swift in Sources */,
-				3A7336C31EABD7F90008D591 /* NSEntityDescription+Extension.swift in Sources */,
 				3A7336D31EABF9110008D591 /* FindAll.swift in Sources */,
-				3A7336DD1EABF9AD0008D591 /* Count.swift in Sources */,
+				3A7336DD1EABF9AD0008D591 /* GetCount.swift in Sources */,
 				3A7336BE1EABCB250008D591 /* FetchRequest.swift in Sources */,
 				3A7336EC1EADEE0E0008D591 /* FetchResults.swift in Sources */,
 				3A7336CE1EABF8B80008D591 /* FindFirst.swift in Sources */,
@@ -702,6 +762,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9773591EAFA0BD00C7C8BD /* DeleteAllTests.swift in Sources */,
+				3A9773611EAFB09100C7C8BD /* AggregateTests.swift in Sources */,
+				3A97735D1EAFAFB800C7C8BD /* GetCountTests.swift in Sources */,
+				3A9773691EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift in Sources */,
+				3A97734D1EAF9A7300C7C8BD /* FindFirstTests.swift in Sources */,
+				3A9773551EAF9E2E00C7C8BD /* FindRangeTests.swift in Sources */,
+				3A7336F51EAF76C90008D591 /* FetchRequestTests.swift in Sources */,
+				3A9773511EAF9D4300C7C8BD /* FindAllTests.swift in Sources */,
+				3A7336F11EAF70EE0008D591 /* FetchKitTests.swift in Sources */,
+				3A9773651EAFB6C700C7C8BD /* FetchResultsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,7 +859,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -851,7 +921,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.agarunov.FetchKit-iOS";
@@ -1636,6 +1706,7 @@
 				3A73369E1EABC4790008D591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A7336AC1EABC4BC0008D591 /* Build configuration list for PBXNativeTarget "FetchKit macOS Tests" */ = {
 			isa = XCConfigurationList;
@@ -1644,6 +1715,7 @@
 				3A7336AE1EABC4BC0008D591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

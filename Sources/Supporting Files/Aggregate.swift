@@ -21,7 +21,7 @@ open class aggregate<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     
     open func execute(in context: NSManagedObjectContext) throws -> Any? {
         let entityDescription = NSEntityDescription.entity(forEntityName: entityName, in: context)
-        guard let attributeDescription = entityDescription?.attributeDescription(for: property) else {
+        guard let attributeDescription = entityDescription?.attributesByName[property] else {
             return nil
         }
         
@@ -40,7 +40,7 @@ open class aggregate<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     }
 }
 
-open class min<ModelType: NSManagedObject>: aggregate<ModelType> {
+open class getMin<ModelType: NSManagedObject>: aggregate<ModelType> {
     
     public init(property: String, entityName: String = ModelType.fk_entityName) {
         super.init(property: property, function: "min:", entityName: entityName)
@@ -48,7 +48,7 @@ open class min<ModelType: NSManagedObject>: aggregate<ModelType> {
     
 }
 
-open class max<ModelType: NSManagedObject>: aggregate<ModelType> {
+open class getMax<ModelType: NSManagedObject>: aggregate<ModelType> {
     
     public init(property: String, entityName: String = ModelType.fk_entityName) {
         super.init(property: property, function: "max:", entityName: entityName)

@@ -9,7 +9,7 @@
 import CoreData
 import Foundation
 
-open class count<ModelType: NSManagedObject>: FetchRequest<ModelType> {
+open class getCount<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     
     open func execute(in context: NSManagedObjectContext) throws -> Int {
         let request: NSFetchRequest<ModelType> = fetchRequest()

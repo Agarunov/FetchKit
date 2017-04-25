@@ -2,6 +2,8 @@
 
 disabled_rules:
   - identifier_name
+  - force_cast
+  - force_try
   - trailing_whitespace
   - type_name
   
@@ -17,7 +19,6 @@ opt_in_rules:
   - fatal_error_message
   - file_header
   - first_where
-  - implicitly_unwrapped_optional
   - missing_docs
   - nimble_operator
   - number_separator

@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A7336961EABC4790008D591"
-               BuildableName = "FetchKit.framework"
-               BlueprintName = "FetchKit macOS"
+               BlueprintIdentifier = "3A73365C1EABBD6E0008D591"
+               BuildableName = "FetchKit iOS Tests.xctest"
+               BlueprintName = "FetchKit iOS Tests"
                ReferencedContainer = "container:FetchKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,28 +26,20 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A7336A31EABC4BC0008D591"
-               BuildableName = "FetchKit macOS Tests.xctest"
-               BlueprintName = "FetchKit macOS Tests"
+               BlueprintIdentifier = "3A73365C1EABBD6E0008D591"
+               BuildableName = "FetchKit iOS Tests.xctest"
+               BlueprintName = "FetchKit iOS Tests"
                ReferencedContainer = "container:FetchKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A7336961EABC4790008D591"
-            BuildableName = "FetchKit.framework"
-            BlueprintName = "FetchKit macOS"
-            ReferencedContainer = "container:FetchKit.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +56,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A7336961EABC4790008D591"
-            BuildableName = "FetchKit.framework"
-            BlueprintName = "FetchKit macOS"
+            BlueprintIdentifier = "3A73365C1EABBD6E0008D591"
+            BuildableName = "FetchKit iOS Tests.xctest"
+            BlueprintName = "FetchKit iOS Tests"
             ReferencedContainer = "container:FetchKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +74,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A7336961EABC4790008D591"
-            BuildableName = "FetchKit.framework"
-            BlueprintName = "FetchKit macOS"
+            BlueprintIdentifier = "3A73365C1EABBD6E0008D591"
+            BuildableName = "FetchKit iOS Tests.xctest"
+            BlueprintName = "FetchKit iOS Tests"
             ReferencedContainer = "container:FetchKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

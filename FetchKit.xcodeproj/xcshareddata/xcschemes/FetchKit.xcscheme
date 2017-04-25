@@ -57,7 +57,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3A7336961EABC4790008D591"
-               BuildableName = "FetchKit macOS.framework"
+               BuildableName = "FetchKit.framework"
                BlueprintName = "FetchKit macOS"
                ReferencedContainer = "container:FetchKit.xcodeproj">
             </BuildableReference>
