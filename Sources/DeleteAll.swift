@@ -11,6 +11,7 @@ import Foundation
 
 open class deleteAll<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     
+    @discardableResult
     open func execute(in context: NSManagedObjectContext) throws -> Int {
         let request: NSFetchRequest<ModelType> = fetchRequest()
         request.returnsObjectsAsFaults = true
