@@ -68,27 +68,21 @@ class FetchKitTests: XCTestCase {
     private func setupPersistentStoreCoordinator() {
         persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
         
-        do {
-            let tmpDirUrl = FileManager.default.temporaryDirectory.appendingPathComponent("test.sqlite")
-            if FileManager.default.fileExists(atPath: tmpDirUrl.path) {
-                try FileManager.default.removeItem(at: tmpDirUrl)
-            }
-            FileManager.default.createFile(atPath: tmpDirUrl.path, contents: nil, attributes: nil)
-            
-            persistentStore = try persistentStoreCoordinator.addPersistentStore(
-                ofType: NSSQLiteStoreType,
-                configurationName: nil,
-                at: tmpDirUrl,
-                options: nil
-            )
-            
-            context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-            context.persistentStoreCoordinator = persistentStoreCoordinator
-            
-        } catch {
-            print(error)
-            XCTFail("Setup persistent store coordiantor error")
+        let tmpDirUrl = FileManager.default.temporaryDirectory.appendingPathComponent("test.sqlite")
+        if FileManager.default.fileExists(atPath: tmpDirUrl.path) {
+            try! FileManager.default.removeItem(at: tmpDirUrl)
         }
+        FileManager.default.createFile(atPath: tmpDirUrl.path, contents: nil, attributes: nil)
+        
+        persistentStore = try! persistentStoreCoordinator.addPersistentStore(
+            ofType: NSSQLiteStoreType,
+            configurationName: nil,
+            at: tmpDirUrl,
+            options: nil
+        )
+        
+        context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        context.persistentStoreCoordinator = persistentStoreCoordinator
     }
     
     private func populateDatabase() {
@@ -105,13 +99,7 @@ class FetchKitTests: XCTestCase {
             user.lastName = name.1
         }
         
-        do {
-            try context.save()
-        } catch {
-            print(error)
-            XCTFail("Context save error")
-        }
-
+        try! context.save()
     }
     
 }
