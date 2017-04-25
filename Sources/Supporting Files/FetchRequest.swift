@@ -19,18 +19,25 @@ open class FetchRequest<ModelType: NSManagedObject> {
     
     open internal(set) var filterPredicate: NSPredicate?
     
+    open internal(set) var propertiesToFetch: [String]?
+
     // MARK: - Init
     
     public init(entityName: String = ModelType.fk_entityName) {
         self.entityName = entityName
         self.sortDescriptors = []
         self.filterPredicate = nil
+        self.propertiesToFetch = nil
     }
     
     // MARK: - Methods
     
     open func sorted(by key: String, ascending: Bool = true) -> Self {
         let sortDescriptor = NSSortDescriptor(key: key, ascending: ascending)
+        return sorted(by: sortDescriptor)
+    }
+    
+    open func sorted(by sortDescriptor: NSSortDescriptor) -> Self {
         sortDescriptors.append(sortDescriptor)
         return self
     }
@@ -46,16 +53,25 @@ open class FetchRequest<ModelType: NSManagedObject> {
         return self
     }
     
-    open func whereKey(_ key: String, equals value: Any) -> Self {
-        let predicate = NSPredicate(format: "%K == %@", argumentArray: [key, value])
+    open func `where`(_ attribute: String, equals value: Any) -> Self {
+        let predicate = NSPredicate(format: "%K == %@", argumentArray: [attribute, value])
         return filtered(by: predicate)
     }
     
+    open func propertiesToFetch(_ properties: [String]?) -> Self {
+        propertiesToFetch = properties
+        return self
+    }
+
     open func fetchRequest<ResultType: NSFetchRequestResult>() -> NSFetchRequest<ResultType> {
         let request = NSFetchRequest<ResultType>(entityName: entityName)
         request.sortDescriptors = sortDescriptors
         request.predicate = filterPredicate
         
+        if let propertiesToFetch = propertiesToFetch {
+            request.propertiesToFetch = propertiesToFetch
+        }
+
         return request
     }
     
