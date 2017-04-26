@@ -9,9 +9,10 @@
 import CoreData
 import Foundation
 
-public extension NSManagedObject {
+extension NSManagedObject {
     
-    public class var fk_entityName: String {
+    /// Returns entity name
+    open class var fk_entityName: String {
         return NSStringFromClass(self).components(separatedBy: ".").last!
     }
 

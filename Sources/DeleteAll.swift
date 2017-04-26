@@ -11,6 +11,14 @@ import Foundation
 
 open class deleteAll<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     
+    /// Executes fetch request with selected options on given managed object context.
+    /// Deletes `ModelType` objects from persistent store and returns deleted objects count.
+    ///
+    /// - parameter context: Managed object context instance
+    ///
+    /// - returns: Deleted `ModelType` objects count
+    ///
+    /// - throws: Core Data error if fetch fails
     @discardableResult
     open func execute(in context: NSManagedObjectContext) throws -> Int {
         let request: NSFetchRequest<ModelType> = fetchRequest()
