@@ -105,7 +105,7 @@ open class FetchRequest<ModelType: NSManagedObject> {
     /// This method used by subclasses to get NSFetchRequest and execute fetch
     ///
     /// - returns: Configured NSFetchRequest instance
-    open func fetchRequest<ResultType: NSFetchRequestResult>() -> NSFetchRequest<ResultType> {
+    open func buildFetchRequest<ResultType: NSFetchRequestResult>() -> NSFetchRequest<ResultType> {
         let request = NSFetchRequest<ResultType>(entityName: entityName)
         request.sortDescriptors = sortDescriptors
         request.predicate = filterPredicate

@@ -54,7 +54,7 @@ open class aggregate<ModelType: NSManagedObject>: FetchRequest<ModelType> {
         expressionDescription.expression = expression
         expressionDescription.expressionResultType = attributeDescription.attributeType
         
-        let request: NSFetchRequest<NSDictionary> = fetchRequest()
+        let request: NSFetchRequest<NSDictionary> = buildFetchRequest()
         request.resultType = .dictionaryResultType
         request.propertiesToFetch = [expressionDescription]
         

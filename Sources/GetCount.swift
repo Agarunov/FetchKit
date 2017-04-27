@@ -20,7 +20,7 @@ open class getCount<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     ///
     /// - throws: Core Data error if fetch fails
     open func execute(in context: NSManagedObjectContext) throws -> Int {
-        let request: NSFetchRequest<ModelType> = fetchRequest()
+        let request: NSFetchRequest<ModelType> = buildFetchRequest()
         return try context.count(for: request)
     }
     

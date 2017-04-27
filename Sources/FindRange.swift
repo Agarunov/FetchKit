@@ -38,7 +38,7 @@ open class findRange<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     ///
     /// - throws: Core Data error if fetch fails
     open func execute(in context: NSManagedObjectContext) throws -> [ModelType] {
-        let request: NSFetchRequest<ModelType> = fetchRequest()
+        let request: NSFetchRequest<ModelType> = buildFetchRequest()
         request.fetchOffset = range.lowerBound
         request.fetchLimit = range.upperBound - range.lowerBound
         

@@ -20,7 +20,7 @@ open class findFirst<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     ///
     /// - throws: Core Data error if fetch fails
     open func execute(in context: NSManagedObjectContext) throws -> ModelType? {
-        let request: NSFetchRequest<ModelType> = fetchRequest()
+        let request: NSFetchRequest<ModelType> = buildFetchRequest()
         request.fetchLimit = 1
         let result = try context.fetch(request)
         return result.first

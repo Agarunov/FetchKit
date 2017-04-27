@@ -69,7 +69,7 @@ class FetchRequestTests: FetchKitTests {
     }
 
     func testBuildEmptyFetchRequest() {
-        let request: NSFetchRequest<User> = fetchRequest.fetchRequest()
+        let request: NSFetchRequest<User> = fetchRequest.buildFetchRequest()
         XCTAssertEqual(request.entityName, User.fk_entityName)
         XCTAssertEqual(request.sortDescriptors ?? [], [])
         XCTAssertTrue(request.predicate == nil)
@@ -85,7 +85,7 @@ class FetchRequestTests: FetchKitTests {
             .sorted(by: sortDescriptor)
             .filtered(by: predicate)
             .propertiesToFetch(["id"])
-            .fetchRequest()
+            .buildFetchRequest()
         XCTAssertEqual(request.entityName, "UserEntity")
         XCTAssertEqual(request.sortDescriptors!, [sortDescriptor])
         XCTAssertEqual(request.predicate, predicate)

@@ -21,7 +21,7 @@ open class deleteAll<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     /// - throws: Core Data error if fetch fails
     @discardableResult
     open func execute(in context: NSManagedObjectContext) throws -> Int {
-        let request: NSFetchRequest<ModelType> = fetchRequest()
+        let request: NSFetchRequest<ModelType> = buildFetchRequest()
         request.returnsObjectsAsFaults = true
         request.includesPropertyValues = false
         

@@ -38,7 +38,7 @@ open class fetchResults<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     ///
     /// - throws: Core Data error if fetch fails
     open func execute(in context: NSManagedObjectContext) throws -> NSFetchedResultsController<ModelType> {
-        let request: NSFetchRequest<ModelType> = fetchRequest()
+        let request: NSFetchRequest<ModelType> = buildFetchRequest()
         let controller = NSFetchedResultsController(
             fetchRequest: request,
             managedObjectContext: context,
