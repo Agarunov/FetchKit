@@ -37,7 +37,18 @@ class FetchRequestTests: FetchKitTests {
                        [NSSortDescriptor(key: "firstName", ascending: true),
                         NSSortDescriptor(key: "lastName", ascending: false)])
     }
-
+    
+    func testSortedByKeyPath() {
+        _ = fetchRequest.sorted(by: \User.firstName)
+        XCTAssertEqual(fetchRequest.sortDescriptors,
+                       [NSSortDescriptor(key: "firstName", ascending: true)])
+        
+        _ = fetchRequest.sorted(by: \User.lastName, ascending: false)
+        XCTAssertEqual(fetchRequest.sortDescriptors,
+                       [NSSortDescriptor(key: "firstName", ascending: true),
+                        NSSortDescriptor(key: "lastName", ascending: false)])
+    }
+    
     func testSortedBySortDescriptor() {
         let firstNameSortDescriptor = NSSortDescriptor(key: "firstName", ascending: true)
         _ = fetchRequest.sorted(by: firstNameSortDescriptor)
@@ -60,6 +71,11 @@ class FetchRequestTests: FetchKitTests {
     
     func testWhereAttributeEquals() {
         _ = fetchRequest.where("firstName", equals: "John")
+        XCTAssertEqual(fetchRequest.filterPredicate, NSPredicate(format: "firstName == \"John\""))
+    }
+    
+    func testWhereKeyPathEquals() {
+        _ = fetchRequest.where(\User.firstName, equals: "John")
         XCTAssertEqual(fetchRequest.filterPredicate, NSPredicate(format: "firstName == \"John\""))
     }
     

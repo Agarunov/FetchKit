@@ -42,7 +42,18 @@ open class FetchRequest<ModelType: NSManagedObject> {
     
     /// Creates new NSSortDescriptor and adds it to receivers `sortDescriptors` array
     ///
-    /// - parameter key: Entity's attirbute keypath used to sort
+    /// - parameter keyPath: Entity's partial keyPath used to sort
+    /// - parameter ascending: Ascending sort order if true. Otherwise descending.
+    ///
+    /// - returns: Updated `FetchRequet` instance
+    open func sorted(by keyPath: PartialKeyPath<ModelType>, ascending: Bool = true) -> Self {
+        let sortDescriptor = NSSortDescriptor(key: keyPath._kvcKeyPathString!, ascending: ascending)
+        return sorted(by: sortDescriptor)
+    }
+    
+    /// Creates new NSSortDescriptor and adds it to receivers `sortDescriptors` array
+    ///
+    /// - parameter key: Entity's attribute keypath used to sort
     /// - parameter ascending: Ascending sort order if true. Otherwise descending.
     ///
     /// - returns: Updated `FetchRequet` instance
@@ -88,6 +99,18 @@ open class FetchRequest<ModelType: NSManagedObject> {
     /// - returns: Updated `FetchRequet` instance
     open func `where`(_ attribute: String, equals value: Any) -> Self {
         let predicate = NSPredicate(format: "%K == %@", argumentArray: [attribute, value])
+        return filtered(by: predicate)
+    }
+    
+    /// Creates NSPredicate with format `keyPath == value"` and updates
+    /// recievers `filterPredicate` property
+    ///
+    /// - parameter keyPath: Entity's attribute keypath
+    /// - parameter value: Expected entity's attribute value
+    ///
+    /// - returns: Updated `FetchRequet` instance
+    open func `where`<ValueType>(_ keyPath: KeyPath<ModelType, ValueType>, equals value: ValueType) -> Self {
+        let predicate = NSPredicate(format: "%K == %@", argumentArray: [keyPath._kvcKeyPathString!, value])
         return filtered(by: predicate)
     }
     
