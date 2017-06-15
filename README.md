@@ -13,12 +13,14 @@ class User: NSManagedObject {
     @NSManaged var firstName: String?
     @NSManaged var lastName: String?
 }
+
+extension User: QueryProtocol { }
 ```
 
 ### Find first
 Find first `User`. Sorted by firstName.
 ```swift
-let user = try? findFirst<User>()
+let user = try? User.findFirst()
     .sorted(by: #keyPath(User.firstName))
     .execute(in: context)
 ```
@@ -26,42 +28,42 @@ let user = try? findFirst<User>()
 ### Find all
 Find all `Users` with first name John
 ```swift
-let allJohns = try? findAll<User>()
+let allJohns = try? User.findAll()
     .where(#keyPath(User.firstName), equals: "John")
     .execute(in: context)
 ```
 
 ### Find range
 ```swift
-let ranged = try? findRange<User>(2..<5)
+let ranged = try? User.findRange(2..<5)
     .sorted(by: #keyPath(User.id))
     .execute(in: context)
 ```
 
 ### Get count
 ```swift
-let usersCount = try? getCount<User>()
+let usersCount = try? User.getCount()
     .execute(in: context)
 ```
 
 ### Min
 Aggregate minimimum value of entity property
 ```swift
-let minId = try? getMin<User>(property: #keyPath(User.id))
+let minId = try? User.getMin(property: #keyPath(User.id))
     .execute(in: context)
 ```
 
 ### Max
 Aggregate maximum value of entity property
 ```swift
-let maxId = try? getMax<User>(property: #keyPath(User.id))
+let maxId = try? User.getMax(property: #keyPath(User.id))
     .execute(in: context)
 ```
 
 ### Delete
 Delete all `Users` with first name John and returns count
 ```swift
-let deleteCount = try? deleteAll<User>()
+let deleteCount = try? User.deleteAll()
     .where(#keyPath(User.firstName), equals: "John")
     .execute(in: context)
 ```
@@ -69,7 +71,7 @@ let deleteCount = try? deleteAll<User>()
 ### Fetched results controller
 Return `NSFetchedResultsContoller` and perform fetch
 ```swift
-let userFetchedResults = try? fetchResults<User>()
+let userFetchedResults = try? User.fetchResults()
     .group(by: #keyPath(User.firstName))
     .sorted(by: #keyPath(User.firstName))
     .sorted(by: #keyPath(User.lastName))
