@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'FetchKit'
-  spec.version      = '1.0.3'
+  spec.version      = '1.0.4'
   spec.license      = { :type => 'BSD' }
   spec.homepage     = 'https://github.com/Agarunov/FetchKit'
   spec.authors      = { 'Anton Agarunov' => 'agarunov.anton@gmail.com' }
