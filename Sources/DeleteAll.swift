@@ -9,7 +9,7 @@
 import CoreData
 import Foundation
 
-open class deleteAll<ModelType: NSManagedObject>: FetchRequest<ModelType> {
+open class DeleteAll<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     
     /// Executes fetch request with selected options on given managed object context.
     /// Deletes `ModelType` objects from persistent store and returns deleted objects count.

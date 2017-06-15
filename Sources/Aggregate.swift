@@ -9,7 +9,7 @@
 import CoreData
 import Foundation
 
-open class aggregate<ModelType: NSManagedObject>: FetchRequest<ModelType> {
+open class Aggregate<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     
     // MARK: - Properties
     
@@ -64,7 +64,7 @@ open class aggregate<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     
 }
 
-open class getMin<ModelType: NSManagedObject>: aggregate<ModelType> {
+open class GetMin<ModelType: NSManagedObject>: Aggregate<ModelType> {
     
     /// Initializes a fetch request configured with a given aggregation property and entity name.
     /// Sets aggregation function to `"min:"`.
@@ -77,7 +77,7 @@ open class getMin<ModelType: NSManagedObject>: aggregate<ModelType> {
     
 }
 
-open class getMax<ModelType: NSManagedObject>: aggregate<ModelType> {
+open class GetMax<ModelType: NSManagedObject>: Aggregate<ModelType> {
     
     /// Initializes a fetch request configured with a given aggregation property and entity name.
     /// Sets aggregation function to `"max:"`.

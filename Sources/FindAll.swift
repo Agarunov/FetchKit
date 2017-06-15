@@ -9,7 +9,7 @@
 import CoreData
 import Foundation
 
-open class findAll<ModelType: NSManagedObject>: FetchRequest<ModelType> {
+open class FindAll<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     
     /// Executes fetch request with selected options on given managed object context.
     /// Returns `ModelType` objects array.

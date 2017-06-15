@@ -13,7 +13,7 @@ import XCTest
 class FindAllTests: FetchKitTests {
     
     func testExecute() {
-        let all = try! findAll<User>().execute(in: context)
+        let all = try! FindAll<User>().execute(in: context)
         XCTAssertEqual(all.count, 5)
     }
     

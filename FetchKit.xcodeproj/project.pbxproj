@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A5E40551EF2C7D800C64F05 /* QueryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E40541EF2C7D800C64F05 /* QueryProtocol.swift */; };
+		3A5E40571EF2C7D800C64F05 /* QueryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E40541EF2C7D800C64F05 /* QueryProtocol.swift */; };
+		3A5E40581EF2C7D800C64F05 /* QueryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E40541EF2C7D800C64F05 /* QueryProtocol.swift */; };
+		3A5E405A1EF2C7D800C64F05 /* QueryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E40541EF2C7D800C64F05 /* QueryProtocol.swift */; };
+		3A5E405D1EF2CB0900C64F05 /* QueryProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E405C1EF2CB0900C64F05 /* QueryProtocolTests.swift */; };
+		3A5E405E1EF2CB0900C64F05 /* QueryProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E405C1EF2CB0900C64F05 /* QueryProtocolTests.swift */; };
+		3A5E405F1EF2CB0900C64F05 /* QueryProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E405C1EF2CB0900C64F05 /* QueryProtocolTests.swift */; };
 		3A73364E1EABB9580008D591 /* FetchKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A73364B1EABB9580008D591 /* FetchKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A7336501EABB9CC0008D591 /* FetchKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A73364B1EABB9580008D591 /* FetchKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A7336511EABB9CD0008D591 /* FetchKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A73364B1EABB9580008D591 /* FetchKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -106,6 +113,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A5E40541EF2C7D800C64F05 /* QueryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryProtocol.swift; sourceTree = "<group>"; };
+		3A5E405C1EF2CB0900C64F05 /* QueryProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryProtocolTests.swift; sourceTree = "<group>"; };
 		3A7336191EABB70B0008D591 /* FetchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FetchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7336271EABB7250008D591 /* FetchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FetchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7336341EABB7350008D591 /* FetchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FetchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +236,7 @@
 				3A9773961EAFCA8100C7C8BD /* GetCount.swift */,
 				3A97738F1EAFCA8100C7C8BD /* Aggregate.swift */,
 				3A9773921EAFCA8100C7C8BD /* FetchResults.swift */,
+				3A5E40541EF2C7D800C64F05 /* QueryProtocol.swift */,
 				3A9773971EAFCA8100C7C8BD /* NSManagedObject+Extension.swift */,
 				3A73364A1EABB9580008D591 /* Supporting Files */,
 			);
@@ -255,6 +265,7 @@
 				3A97735A1EAFAFB800C7C8BD /* GetCountTests.swift */,
 				3A97735E1EAFB09100C7C8BD /* AggregateTests.swift */,
 				3A9773621EAFB6C700C7C8BD /* FetchResultsTests.swift */,
+				3A5E405C1EF2CB0900C64F05 /* QueryProtocolTests.swift */,
 				3A9773661EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift */,
 			);
 			path = Tests;
@@ -664,6 +675,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5E40551EF2C7D800C64F05 /* QueryProtocol.swift in Sources */,
 				3A9773A01EAFCA8100C7C8BD /* FetchRequest.swift in Sources */,
 				3A97739C1EAFCA8100C7C8BD /* DeleteAll.swift in Sources */,
 				3A9773A41EAFCA8100C7C8BD /* FetchResults.swift in Sources */,
@@ -680,6 +692,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5E40571EF2C7D800C64F05 /* QueryProtocol.swift in Sources */,
 				3A9773A11EAFCA8100C7C8BD /* FetchRequest.swift in Sources */,
 				3A97739D1EAFCA8100C7C8BD /* DeleteAll.swift in Sources */,
 				3A9773A51EAFCA8100C7C8BD /* FetchResults.swift in Sources */,
@@ -696,6 +709,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5E40581EF2C7D800C64F05 /* QueryProtocol.swift in Sources */,
 				3A9773A21EAFCA8100C7C8BD /* FetchRequest.swift in Sources */,
 				3A97739E1EAFCA8100C7C8BD /* DeleteAll.swift in Sources */,
 				3A9773A61EAFCA8100C7C8BD /* FetchResults.swift in Sources */,
@@ -716,6 +730,7 @@
 				3A97735F1EAFB09100C7C8BD /* AggregateTests.swift in Sources */,
 				3A97735B1EAFAFB800C7C8BD /* GetCountTests.swift in Sources */,
 				3A9773671EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift in Sources */,
+				3A5E405D1EF2CB0900C64F05 /* QueryProtocolTests.swift in Sources */,
 				3A97734A1EAF9A6C00C7C8BD /* FindFirstTests.swift in Sources */,
 				3A9773531EAF9E2E00C7C8BD /* FindRangeTests.swift in Sources */,
 				3A7336F31EAF76C90008D591 /* FetchRequestTests.swift in Sources */,
@@ -733,6 +748,7 @@
 				3A9773601EAFB09100C7C8BD /* AggregateTests.swift in Sources */,
 				3A97735C1EAFAFB800C7C8BD /* GetCountTests.swift in Sources */,
 				3A9773681EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift in Sources */,
+				3A5E405E1EF2CB0900C64F05 /* QueryProtocolTests.swift in Sources */,
 				3A97734C1EAF9A7200C7C8BD /* FindFirstTests.swift in Sources */,
 				3A9773541EAF9E2E00C7C8BD /* FindRangeTests.swift in Sources */,
 				3A7336F41EAF76C90008D591 /* FetchRequestTests.swift in Sources */,
@@ -746,6 +762,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5E405A1EF2C7D800C64F05 /* QueryProtocol.swift in Sources */,
 				3A9773A31EAFCA8100C7C8BD /* FetchRequest.swift in Sources */,
 				3A97739F1EAFCA8100C7C8BD /* DeleteAll.swift in Sources */,
 				3A9773A71EAFCA8100C7C8BD /* FetchResults.swift in Sources */,
@@ -766,6 +783,7 @@
 				3A9773611EAFB09100C7C8BD /* AggregateTests.swift in Sources */,
 				3A97735D1EAFAFB800C7C8BD /* GetCountTests.swift in Sources */,
 				3A9773691EAFB8F300C7C8BD /* NSManagedObjectExtensionTests.swift in Sources */,
+				3A5E405F1EF2CB0900C64F05 /* QueryProtocolTests.swift in Sources */,
 				3A97734D1EAF9A7300C7C8BD /* FindFirstTests.swift in Sources */,
 				3A9773551EAF9E2E00C7C8BD /* FindRangeTests.swift in Sources */,
 				3A7336F51EAF76C90008D591 /* FetchRequestTests.swift in Sources */,

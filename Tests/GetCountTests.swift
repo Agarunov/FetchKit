@@ -13,7 +13,7 @@ import XCTest
 class GetCountTests: FetchKitTests {
     
     func testExecute() {
-        let usersCount = try! getCount<User>().execute(in: context)
+        let usersCount = try! GetCount<User>().execute(in: context)
         XCTAssertEqual(usersCount, 5)
     }
     

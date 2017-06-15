@@ -9,7 +9,7 @@
 import CoreData
 import Foundation
 
-open class findFirst<ModelType: NSManagedObject>: FetchRequest<ModelType> {
+open class FindFirst<ModelType: NSManagedObject>: FetchRequest<ModelType> {
 
     /// Executes fetch request with selected options on given managed object context.
     /// Returns `ModelType` object or `nil` for empty fetch results

@@ -13,7 +13,7 @@ import XCTest
 class FindFirstTests: FetchKitTests {
         
     func testExecute() {
-        let user = try! findFirst<User>()
+        let user = try! FindFirst<User>()
             .sorted(by: #keyPath(User.firstName))
             .execute(in: context)
         XCTAssertEqual(user!.id, 3)

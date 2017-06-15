@@ -17,6 +17,8 @@ class User: NSManagedObject {
     @NSManaged var lastName: String?
 }
 
+extension User: QueryProtocol { }
+
 class FetchKitTests: XCTestCase {
     
     var model: NSManagedObjectModel!
