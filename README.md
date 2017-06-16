@@ -2,7 +2,7 @@
 
 Lightweight Core Data fetch framework.
 
-With FetchKit you can easy fetch data from store without creating `NSFetchRequest`.
+With FetchKit you can easily fetch data from store without creating `NSFetchRequest`.
 
 ## Usage
 Example Core Data entity
