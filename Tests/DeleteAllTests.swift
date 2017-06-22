@@ -13,10 +13,10 @@ import XCTest
 class DeleteAllTests: FetchKitTests {
     
     func testExecute() {
-        let deleteCount = try! deleteAll<User>()
+        let deleteCount = try! DeleteAll<User>()
             .where(#keyPath(User.firstName), equals: "John")
             .execute(in: context)
-        let newCount = try! getCount<User>().execute(in: context)
+        let newCount = try! GetCount<User>().execute(in: context)
         
         XCTAssertEqual(deleteCount, 2)
         XCTAssertEqual(newCount, 3)

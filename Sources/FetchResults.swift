@@ -9,8 +9,8 @@
 import CoreData
 import Foundation
 
-@available(OSX 10.12, *)
-open class fetchResults<ModelType: NSManagedObject>: FetchRequest<ModelType> {
+@available(macOS 10.12, *)
+open class FetchResults<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     
     // MARK: - Properties
     

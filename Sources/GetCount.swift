@@ -9,7 +9,7 @@
 import CoreData
 import Foundation
 
-open class getCount<ModelType: NSManagedObject>: FetchRequest<ModelType> {
+open class GetCount<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     
     /// Executes fetch request with selected options on given managed object context.
     /// Returns stored `ModelType` objects count.

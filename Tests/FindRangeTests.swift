@@ -13,18 +13,18 @@ import XCTest
 class FindRangeTests: FetchKitTests {
     
     func testInit() {
-        var findRangeRequest = findRange<User>(0..<2, entityName: "UserEntity")
+        var findRangeRequest = FindRange<User>(0..<2, entityName: "UserEntity")
         XCTAssertEqual(findRangeRequest.entityName, "UserEntity")
         XCTAssertEqual(findRangeRequest.range, 0..<2)
         
-        findRangeRequest = findRange<User>(0..<2)
+        findRangeRequest = FindRange<User>(0..<2)
         XCTAssertEqual(findRangeRequest.entityName, User.fk_entityName)
         XCTAssertEqual(findRangeRequest.range, 0..<2)
 
     }
     
     func testExecute() {
-        let users = try! findRange<User>(0..<2)
+        let users = try! FindRange<User>(0..<2)
             .sorted(by: #keyPath(User.firstName))
             .sorted(by: #keyPath(User.lastName))
             .execute(in: context)

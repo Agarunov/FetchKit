@@ -13,13 +13,13 @@ import XCTest
 class FetchResultsTests: FetchKitTests {
     
     func testGroupBy() {
-        let request = fetchResults<User>()
+        let request = FetchResults<User>()
             .group(by: #keyPath(User.firstName))
         XCTAssertEqual(request.groupByKeyPath, #keyPath(User.firstName))
     }
     
     func testExecute() {
-        let resultsController = try! fetchResults<User>()
+        let resultsController = try! FetchResults<User>()
             .group(by: #keyPath(User.firstName))
             .sorted(by: #keyPath(User.firstName))
             .sorted(by: #keyPath(User.lastName))

@@ -9,7 +9,7 @@
 import CoreData
 import Foundation
 
-open class findRange<ModelType: NSManagedObject>: FetchRequest<ModelType> {
+open class FindRange<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     
     // MARK: - Properties
     
