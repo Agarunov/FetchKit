@@ -70,7 +70,8 @@ class FetchKitTests: XCTestCase {
     private func setupPersistentStoreCoordinator() {
         persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
         
-        let tmpDirUrl = FileManager.default.temporaryDirectory.appendingPathComponent("test.sqlite")
+        let tmpDirUrl = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+            .appendingPathComponent("test.sqlite")
         if FileManager.default.fileExists(atPath: tmpDirUrl.path) {
             try! FileManager.default.removeItem(at: tmpDirUrl)
         }
