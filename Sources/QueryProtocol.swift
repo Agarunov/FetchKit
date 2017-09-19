@@ -9,7 +9,8 @@
 import CoreData
 import Foundation
 
-protocol QueryProtocol {
+/// Use `QueryProtocol` with `NSManagedObject` subclass to add default query methods implementations
+public protocol QueryProtocol {
     
     associatedtype QueryModelType: NSManagedObject
     
@@ -34,7 +35,7 @@ protocol QueryProtocol {
     
 }
 
-extension QueryProtocol where Self: NSManagedObject {
+public extension QueryProtocol where Self: NSManagedObject {
     
     static func findFirst() -> FindFirst<Self> {
         return FindFirst()
