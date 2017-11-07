@@ -21,7 +21,7 @@ extension User: QueryProtocol { }
 Find first `User`. Sorted by firstName.
 ```swift
 let user = try? User.findFirst()
-    .sorted(by: #keyPath(User.firstName))
+    .sorted(by: \User.firstName)
     .execute(in: context)
 ```
 
@@ -29,14 +29,14 @@ let user = try? User.findFirst()
 Find all `Users` with first name John
 ```swift
 let allJohns = try? User.findAll()
-    .where(#keyPath(User.firstName), equals: "John")
+    .where(\User.firstName, equals: "John")
     .execute(in: context)
 ```
 
 ### Find range
 ```swift
 let ranged = try? User.findRange(2..<5)
-    .sorted(by: #keyPath(User.id))
+    .sorted(by: \User.id)
     .execute(in: context)
 ```
 
@@ -64,7 +64,7 @@ let maxId = try? User.getMax(property: #keyPath(User.id))
 Delete all `Users` with first name John and returns count
 ```swift
 let deleteCount = try? User.deleteAll()
-    .where(#keyPath(User.firstName), equals: "John")
+    .where(\User.firstName, equals: "John")
     .execute(in: context)
 ```
 
@@ -73,8 +73,8 @@ Return `NSFetchedResultsContoller` and perform fetch
 ```swift
 let userFetchedResults = try? User.fetchResults()
     .group(by: #keyPath(User.firstName))
-    .sorted(by: #keyPath(User.firstName))
-    .sorted(by: #keyPath(User.lastName))
+    .sorted(by: \User.firstName)
+    .sorted(by: \User.lastName)
     .execute(in: context)
 ```
 
