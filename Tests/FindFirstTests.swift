@@ -10,7 +10,9 @@ import CoreData
 @testable import FetchKit
 import XCTest
 
-class FindFirstTests: FetchKitTests {
+// swiftlint:disable force_try force_unwrapping
+
+internal class FindFirstTests: FetchKitTests {
         
     func testExecute() {
         let user = try! FindFirst<User>()

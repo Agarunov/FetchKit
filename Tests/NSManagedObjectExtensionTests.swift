@@ -9,7 +9,7 @@
 @testable import FetchKit
 import XCTest
 
-class NSManagedObjectExtensionTests: XCTestCase {
+internal class NSManagedObjectExtensionTests: XCTestCase {
     
     func testEntityName() {
         XCTAssertEqual(User.fk_entityName, "User")

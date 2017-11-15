@@ -10,7 +10,9 @@ import CoreData
 @testable import FetchKit
 import XCTest
 
-class DeleteAllTests: FetchKitTests {
+// swiftlint:disable force_try
+
+internal class DeleteAllTests: FetchKitTests {
     
     func testExecute() {
         let deleteCount = try! DeleteAll<User>()

@@ -10,7 +10,9 @@ import CoreData
 @testable import FetchKit
 import XCTest
 
-class FetchRequestTests: FetchKitTests {
+// swiftlint:disable force_cast force_unwrapping implicitly_unwrapped_optional 
+
+internal class FetchRequestTests: FetchKitTests {
     
     var fetchRequest: FetchRequest<User>!
     

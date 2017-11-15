@@ -10,7 +10,9 @@ import CoreData
 @testable import FetchKit
 import XCTest
 
-class GetCountTests: FetchKitTests {
+// swiftlint:disable force_try
+
+internal class GetCountTests: FetchKitTests {
     
     func testExecute() {
         let usersCount = try! GetCount<User>().execute(in: context)

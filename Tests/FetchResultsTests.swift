@@ -10,7 +10,9 @@ import CoreData
 @testable import FetchKit
 import XCTest
 
-class FetchResultsTests: FetchKitTests {
+// swiftlint:disable force_try force_unwrapping
+
+internal class FetchResultsTests: FetchKitTests {
     
     func testGroupBy() {
         let request = FetchResults<User>()

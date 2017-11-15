@@ -35,7 +35,7 @@ public protocol QueryProtocol {
     
 }
 
-public extension QueryProtocol where Self: NSManagedObject {
+extension QueryProtocol where Self: NSManagedObject {
     
     static func findFirst() -> FindFirst<Self> {
         return FindFirst()

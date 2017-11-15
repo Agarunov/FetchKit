@@ -1,6 +1,6 @@
 //
-//  FetchKit iOS.h
-//  FetchKit iOS
+//  FetchKit.h
+//  FetchKit
 //
 //  Created by Anton Agarunov on 22.04.17.
 //

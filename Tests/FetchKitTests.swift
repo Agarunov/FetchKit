@@ -10,8 +10,10 @@ import CoreData
 @testable import FetchKit
 import XCTest
 
+// swiftlint:disable force_cast force_try implicitly_unwrapped_optional no_grouping_extension
+
 @objc(User)
-class User: NSManagedObject {
+internal class User: NSManagedObject {
     @NSManaged var id: Int64
     @NSManaged var firstName: String?
     @NSManaged var lastName: String?
@@ -19,7 +21,7 @@ class User: NSManagedObject {
 
 extension User: QueryProtocol { }
 
-class FetchKitTests: XCTestCase {
+internal class FetchKitTests: XCTestCase {
     
     var model: NSManagedObjectModel!
     var context: NSManagedObjectContext!

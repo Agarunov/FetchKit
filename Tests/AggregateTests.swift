@@ -10,7 +10,9 @@ import CoreData
 @testable import FetchKit
 import XCTest
 
-class AggregateTests: FetchKitTests {
+// swiftlint:disable force_cast force_try
+
+internal class AggregateTests: FetchKitTests {
     
     func testInit() {
         var aggreggateRequest = Aggregate<User>(property: "id", function: "min:", entityName: "UserEntity")

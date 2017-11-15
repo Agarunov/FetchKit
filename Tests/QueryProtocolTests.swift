@@ -10,7 +10,9 @@ import CoreData
 @testable import FetchKit
 import XCTest
 
-class QueryProtocolTests: FetchKitTests {
+// swiftlint:disable force_cast force_try force_unwrapping
+
+internal class QueryProtocolTests: FetchKitTests {
 
     func testFindFirst() {
         let user = try! User.findFirst()

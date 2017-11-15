@@ -10,7 +10,9 @@ import CoreData
 @testable import FetchKit
 import XCTest
 
-class FindAllTests: FetchKitTests {
+// swiftlint:disable force_try
+
+internal class FindAllTests: FetchKitTests {
     
     func testExecute() {
         let all = try! FindAll<User>().execute(in: context)

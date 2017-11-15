@@ -10,7 +10,9 @@ import CoreData
 @testable import FetchKit
 import XCTest
 
-class FindRangeTests: FetchKitTests {
+// swiftlint:disable force_try
+
+internal class FindRangeTests: FetchKitTests {
     
     func testInit() {
         var findRangeRequest = FindRange<User>(0..<2, entityName: "UserEntity")
