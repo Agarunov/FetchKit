@@ -31,7 +31,18 @@ open class Aggregate<ModelType: NSManagedObject>: FetchRequest<ModelType> {
         self.function = function
         super.init(entityName: entityName)
     }
-    
+
+    /// Initializes a fetch request configured with a given aggregation function, keyPath and entity name
+    ///
+    /// - parameter keyPath: Aggregation keyPath
+    /// - parameter function: Aggregation function
+    /// - parameter entityName: The name of the entity the request is configured to fetch.
+    public convenience init(keyPath: PartialKeyPath<ModelType>,
+                            function: String,
+                            entityName: String = ModelType.fk_entityName) {
+        self.init(property: keyPath._kvcKeyPathString!, function: function, entityName: entityName)
+    }
+
     // MARK: - Methods
     
     /// Executes fetch request with selected options on given managed object context.
@@ -74,7 +85,16 @@ open class GetMin<ModelType: NSManagedObject>: Aggregate<ModelType> {
     public init(property: String, entityName: String = ModelType.fk_entityName) {
         super.init(property: property, function: "min:", entityName: entityName)
     }
-    
+
+    /// Initializes a fetch request configured with a given aggregation keyPath and entity name.
+    /// Sets aggregation function to `"min:"`.
+    ///
+    /// - parameter property: Aggregation keyPath
+    /// - parameter entityName: The name of the entity the request is configured to fetch.
+    public convenience init(keyPath: PartialKeyPath<ModelType>, entityName: String = ModelType.fk_entityName) {
+        self.init(property: keyPath._kvcKeyPathString!, entityName: entityName)
+    }
+
 }
 
 open class GetMax<ModelType: NSManagedObject>: Aggregate<ModelType> {
@@ -86,6 +106,15 @@ open class GetMax<ModelType: NSManagedObject>: Aggregate<ModelType> {
     /// - parameter entityName: The name of the entity the request is configured to fetch.
     public init(property: String, entityName: String = ModelType.fk_entityName) {
         super.init(property: property, function: "max:", entityName: entityName)
+    }
+
+    /// Initializes a fetch request configured with a given aggregation keyPath and entity name.
+    /// Sets aggregation function to `"max:"`.
+    ///
+    /// - parameter property: Aggregation keyPath
+    /// - parameter entityName: The name of the entity the request is configured to fetch.
+    public convenience init(keyPath: PartialKeyPath<ModelType>, entityName: String = ModelType.fk_entityName) {
+        self.init(property: keyPath._kvcKeyPathString!, entityName: entityName)
     }
     
 }

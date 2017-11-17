@@ -45,7 +45,7 @@ open class FetchRequest<ModelType: NSManagedObject> {
     /// - parameter keyPath: Entity's partial keyPath used to sort
     /// - parameter ascending: Ascending sort order if true. Otherwise descending.
     ///
-    /// - returns: Updated `FetchRequet` instance
+    /// - returns: Updated `FetchRequest` instance
     open func sorted(by keyPath: PartialKeyPath<ModelType>, ascending: Bool = true) -> Self {
         let sortDescriptor = NSSortDescriptor(key: keyPath._kvcKeyPathString!, ascending: ascending)
         return sorted(by: sortDescriptor)
@@ -56,7 +56,7 @@ open class FetchRequest<ModelType: NSManagedObject> {
     /// - parameter key: Entity's attribute keypath used to sort
     /// - parameter ascending: Ascending sort order if true. Otherwise descending.
     ///
-    /// - returns: Updated `FetchRequet` instance
+    /// - returns: Updated `FetchRequest` instance
     open func sorted(by key: String, ascending: Bool = true) -> Self {
         let sortDescriptor = NSSortDescriptor(key: key, ascending: ascending)
         return sorted(by: sortDescriptor)
@@ -66,7 +66,7 @@ open class FetchRequest<ModelType: NSManagedObject> {
     ///
     /// - parameter sortDescriptor: Sort descriptor
     ///
-    /// - returns: Updated `FetchRequet` instance
+    /// - returns: Updated `FetchRequest` instance
     open func sorted(by sortDescriptor: NSSortDescriptor) -> Self {
         sortDescriptors.append(sortDescriptor)
         return self
@@ -78,7 +78,7 @@ open class FetchRequest<ModelType: NSManagedObject> {
     ///
     /// - parameter predicate: Predicate
     ///
-    /// - returns: Updated `FetchRequet` instance
+    /// - returns: Updated `FetchRequest` instance
     open func filtered(by predicate: NSPredicate) -> Self {
         var newPredicate = predicate
         
@@ -96,7 +96,7 @@ open class FetchRequest<ModelType: NSManagedObject> {
     /// - parameter attribute: Entity's attribute keypath
     /// - parameter value: Expected entity's attribute value
     ///
-    /// - returns: Updated `FetchRequet` instance
+    /// - returns: Updated `FetchRequest` instance
     open func `where`(_ attribute: String, equals value: Any) -> Self {
         let predicate = NSPredicate(format: "%K == %@", argumentArray: [attribute, value])
         return filtered(by: predicate)
@@ -108,7 +108,7 @@ open class FetchRequest<ModelType: NSManagedObject> {
     /// - parameter keyPath: Entity's attribute keypath
     /// - parameter value: Expected entity's attribute value
     ///
-    /// - returns: Updated `FetchRequet` instance
+    /// - returns: Updated `FetchRequest` instance
     open func `where`<ValueType>(_ keyPath: KeyPath<ModelType, ValueType>, equals value: ValueType) -> Self {
         let predicate = NSPredicate(format: "%K == %@", argumentArray: [keyPath._kvcKeyPathString!, value])
         return filtered(by: predicate)
@@ -118,12 +118,22 @@ open class FetchRequest<ModelType: NSManagedObject> {
     ///
     /// - parameter properties: Array of properties keypaths
     ///
-    /// - returns: Updated `FetchRequet` instance
+    /// - returns: Updated `FetchRequest` instance
     open func propertiesToFetch(_ properties: [String]?) -> Self {
         propertiesToFetch = properties
         return self
     }
-    
+
+    /// Sets given array to receivers `propertiesToFetch` property
+    ///
+    /// - parameter properties: Array of properties keypaths
+    ///
+    /// - returns: Updated `FetchRequest` instance
+    open func propertiesToFetch(_ properties: [PartialKeyPath<ModelType>]) -> Self {
+        propertiesToFetch = properties.flatMap { $0._kvcKeyPathString }
+        return self
+    }
+
     /// Creates NSFetchRequest instance and configure with current options
     /// This method used by subclasses to get NSFetchRequest and execute fetch
     ///

@@ -19,7 +19,13 @@ internal class FetchResultsTests: FetchKitTests {
             .group(by: #keyPath(User.firstName))
         XCTAssertEqual(request.groupByKeyPath, #keyPath(User.firstName))
     }
-    
+
+    func testGroupByWithKeyPath() {
+        let request = FetchResults<User>()
+            .group(by: \User.firstName)
+        XCTAssertEqual(request.groupByKeyPath, #keyPath(User.firstName))
+    }
+
     func testExecute() {
         let resultsController = try! FetchResults<User>()
             .group(by: #keyPath(User.firstName))

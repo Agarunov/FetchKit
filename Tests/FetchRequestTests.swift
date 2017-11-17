@@ -84,6 +84,16 @@ internal class FetchRequestTests: FetchKitTests {
     func testPropertiesToFetch() {
         _ = fetchRequest.propertiesToFetch(["firstName"])
         XCTAssertEqual(fetchRequest.propertiesToFetch!, ["firstName"])
+
+        _ = fetchRequest.propertiesToFetch(nil)
+        if fetchRequest.propertiesToFetch != nil {
+            XCTFail("propertiesToFetch shoulbd be nil")
+        }
+    }
+
+    func testPropertiesToFetchWithKeyPaths() {
+        _ = fetchRequest.propertiesToFetch([\User.firstName])
+        XCTAssertEqual(fetchRequest.propertiesToFetch!, ["firstName"])
     }
 
     func testBuildEmptyFetchRequest() {

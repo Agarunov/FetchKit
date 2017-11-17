@@ -23,12 +23,22 @@ open class FetchResults<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     ///
     /// - parameter keyPath: Fetched resuslts controller section name keypath
     ///
-    /// - returns: Updated `fetchResults` instance
+    /// - returns: Updated `FetchResults` instance
     open func group(by keyPath: String?) -> Self {
         groupByKeyPath = keyPath
         return self
     }
-    
+
+    /// Sets receiver `groupByKeyPath` property
+    ///
+    /// - parameter keyPath: Fetched resuslts controller section name keypath
+    ///
+    /// - returns: Updated `FetchResults` instance
+    open func group(by keyPath: PartialKeyPath<ModelType>?) -> Self {
+        groupByKeyPath = keyPath?._kvcKeyPathString
+        return self
+    }
+
     /// Creates `NSFetchedResultsController` with selected options in given managed object context.
     /// Also perform fetch.
     ///
