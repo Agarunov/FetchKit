@@ -29,7 +29,9 @@ public protocol QueryProtocol {
     static func getMin(property: String) -> GetMin<QueryModelType>
     
     static func getMax(property: String) -> GetMax<QueryModelType>
-    
+
+    static func getDistinct() -> GetDistinct<QueryModelType>
+
     @available(macOS 10.12, *)
     static func fetchResults() -> FetchResults<QueryModelType>
     
@@ -68,7 +70,11 @@ extension QueryProtocol where Self: NSManagedObject {
     static func getMax(property: String) -> GetMax<Self> {
         return GetMax(property: property)
     }
-    
+
+    static func getDistinct() -> GetDistinct<Self> {
+        return GetDistinct()
+    }
+
     @available(macOS 10.12, *)
     static func fetchResults() -> FetchResults<Self> {
         return FetchResults()

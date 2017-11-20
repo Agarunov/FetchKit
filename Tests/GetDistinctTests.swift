@@ -9,6 +9,8 @@ import CoreData
 @testable import FetchKit
 import XCTest
 
+// swiftlint:disable force_try
+
 internal class GetDistinctTests: FetchKitTests {
 
     func testInit() {
@@ -61,8 +63,6 @@ internal class GetDistinctTests: FetchKitTests {
         let request = GetDistinct<User>().having(predicate)
         XCTAssertEqual(request.havingPredicate, predicate)
     }
-
-    // swiftlint:disable force_try
 
     func testExecuteAggregate() {
         let result = try! GetDistinct<User>()

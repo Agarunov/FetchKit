@@ -73,7 +73,19 @@ internal class QueryProtocolTests: FetchKitTests {
             .execute(in: context)
         XCTAssertEqual(result as! Int64, 4)
     }
-    
+
+    func testGetDistinct() {
+        let result = try! User.getDistinct()
+            .propertiesToFetch([\User.firstName])
+            .group(by: \User.firstName)
+            .execute(in: context)
+
+        let nsdicts = result.map { NSDictionary(dictionary: $0) }
+        let expected: [NSDictionary] =
+            [["firstName": "Alex"], ["firstName": "Ivan"], ["firstName": "Joe"], ["firstName": "John"]]
+        XCTAssertEqual(nsdicts, expected)
+    }
+
     func testFetchResults() {
         let resultsController = try! User.fetchResults()
             .group(by: #keyPath(User.firstName))
