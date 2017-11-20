@@ -49,14 +49,14 @@ let usersCount = try? User.getCount()
 ### Min
 Aggregate minimimum value of entity property
 ```swift
-let minId = try? User.getMin(property: #keyPath(User.id))
+let minId = try? User.getMin(keyPath: \User.id)
     .execute(in: context)
 ```
 
 ### Max
 Aggregate maximum value of entity property
 ```swift
-let maxId = try? User.getMax(property: #keyPath(User.id))
+let maxId = try? User.getMax(keyPath: \User.id)
     .execute(in: context)
 ```
 
@@ -72,7 +72,7 @@ let deleteCount = try? User.deleteAll()
 Return `NSFetchedResultsContoller` and perform fetch
 ```swift
 let userFetchedResults = try? User.fetchResults()
-    .group(by: #keyPath(User.firstName))
+    .group(by: \User.firstName)
     .sorted(by: \User.firstName)
     .sorted(by: \User.lastName)
     .execute(in: context)

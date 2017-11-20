@@ -17,6 +17,7 @@ internal class User: NSManagedObject {
     @NSManaged var id: Int64
     @NSManaged var firstName: String?
     @NSManaged var lastName: String?
+    @NSManaged var salary: Int64
 }
 
 extension User: QueryProtocol { }
@@ -62,8 +63,13 @@ internal class FetchKitTests: XCTestCase {
         lastNameAttribute.name = "lastName"
         lastNameAttribute.isOptional = true
         lastNameAttribute.attributeType = .stringAttributeType
-        
-        userEntity.properties = [idAttribute, firstNameAttribute, lastNameAttribute]
+
+        let salaryAttribute = NSAttributeDescription()
+        salaryAttribute.name = "salary"
+        salaryAttribute.isOptional = false
+        salaryAttribute.attributeType = .integer64AttributeType
+
+        userEntity.properties = [idAttribute, firstNameAttribute, lastNameAttribute, salaryAttribute]
 
         model = NSManagedObjectModel()
         model.entities = [userEntity]
@@ -91,9 +97,10 @@ internal class FetchKitTests: XCTestCase {
     }
     
     private func populateDatabase() {
-        let data =
-            [("Ivan", "Ivanov"), ("John", "Williams"), ("Joe", "Cole"), ("Alex", "Finch"), ("John", "Donn")]
-        
+        let data: [(String, String, Int64)] =
+            [("Ivan", "Ivanov", 10_000), ("John", "Williams", 12_000),
+             ("Joe", "Cole", 10_000), ("Alex", "Finch", 23_000), ("John", "Donn", 22_000)]
+
         for (idx, name) in data.enumerated() {
             let user = NSEntityDescription.insertNewObject(
                 forEntityName: User.fk_entityName,
@@ -102,6 +109,7 @@ internal class FetchKitTests: XCTestCase {
             user.id = Int64(idx)
             user.firstName = name.0
             user.lastName = name.1
+            user.salary = name.2
         }
         
         try! context.save()
