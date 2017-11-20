@@ -37,7 +37,9 @@ public protocol QueryProtocol {
     
 }
 
-extension QueryProtocol where Self: NSManagedObject {
+// swiftlint:disable no_extension_access_modifier
+
+public extension QueryProtocol where Self: NSManagedObject {
     
     static func findFirst() -> FindFirst<Self> {
         return FindFirst()
