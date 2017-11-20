@@ -12,6 +12,7 @@ class User: NSManagedObject {
     @NSManaged var id: Int64
     @NSManaged var firstName: String?
     @NSManaged var lastName: String?
+    @NSManaged var salary: Int64
 }
 
 extension User: QueryProtocol { }
@@ -65,6 +66,17 @@ Delete all `Users` with first name John and returns count
 ```swift
 let deleteCount = try? User.deleteAll()
     .where(\User.firstName, equals: "John")
+    .execute(in: context)
+```
+
+### Get Distinct
+Fetch dictionaries (instead of managed objects) with specified properties and aggregation functions.
+Result can grouped by properties (SQL GROUP BY)
+```swift
+let result = try User.getDistinct()
+    .propertiesToFetch([\User.firstName])
+    .aggregate(keyPath: \User.salary, function: "sum:", saveAs: "totalSalary")
+    .group(by: \User.firstName)
     .execute(in: context)
 ```
 
