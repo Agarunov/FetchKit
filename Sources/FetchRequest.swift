@@ -130,7 +130,7 @@ open class FetchRequest<ModelType: NSManagedObject> {
     ///
     /// - returns: Updated `FetchRequest` instance
     open func propertiesToFetch(_ properties: [PartialKeyPath<ModelType>]) -> Self {
-        propertiesToFetch = properties.flatMap { $0._kvcKeyPathString }
+        propertiesToFetch = properties.compactMap { $0._kvcKeyPathString }
         return self
     }
 
@@ -142,10 +142,7 @@ open class FetchRequest<ModelType: NSManagedObject> {
         let request = NSFetchRequest<ResultType>(entityName: entityName)
         request.sortDescriptors = sortDescriptors
         request.predicate = filterPredicate
-        
-        if let propertiesToFetch = propertiesToFetch {
-            request.propertiesToFetch = propertiesToFetch
-        }
+        request.propertiesToFetch = propertiesToFetch
 
         return request
     }

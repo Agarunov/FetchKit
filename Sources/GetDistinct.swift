@@ -13,6 +13,8 @@ open class GetDistinct<ModelType: NSManagedObject>: FetchRequest<ModelType> {
 
     public typealias Aggregation = (property: String, function: String, name: String)
 
+    // MARK: - Properties
+
     /// Properties that will be used to group result
     open internal(set) var propertiesToGroupBy: [String]?
 
@@ -60,7 +62,7 @@ open class GetDistinct<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     ///
     /// - returns: Updated `GetDistinct` instance
     open func group(by keyPaths: [PartialKeyPath<ModelType>]) -> Self {
-        propertiesToGroupBy = keyPaths.flatMap { $0._kvcKeyPathString }
+        propertiesToGroupBy = keyPaths.compactMap { $0._kvcKeyPathString }
         return self
     }
 
@@ -114,7 +116,7 @@ open class GetDistinct<ModelType: NSManagedObject>: FetchRequest<ModelType> {
         request.propertiesToGroupBy = propertiesToGroupBy
 
         let entityDescription = NSEntityDescription.entity(forEntityName: entityName, in: context)
-        let expressions = aggregations.flatMap { aggregation -> NSExpressionDescription? in
+        let expressions = aggregations.compactMap { aggregation -> NSExpressionDescription? in
             guard let attributeDescription = entityDescription?.attributeDescription(for: aggregation.property) else {
                 return nil
             }
