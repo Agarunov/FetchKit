@@ -93,8 +93,8 @@ let userFetchedResults = try? User.fetchResults()
 ## Requirements
 
 - iOS 8.0+ / macOS 10.9+ / tvOS 9.0+ / watchOS 2.0+
-- Xcode 9.0+
-- Swift 4.0+
+- Xcode 9.3+
+- Swift 4.1+
 
 ## Installation
 
