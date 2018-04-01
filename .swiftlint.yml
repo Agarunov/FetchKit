@@ -11,6 +11,7 @@ opt_in_rules:
   - closure_spacing
   - conditional_returns_on_newline
   - contains_over_first_not_nil
+  - discouraged_optional_boolean
   - empty_count
   - explicit_enum_raw_value
   - explicit_init
@@ -35,12 +36,15 @@ opt_in_rules:
   - operator_usage_whitespace
   - overridden_super_call
   - override_in_extension
+  - pattern_matching_keywords
+  - private_action
   - private_outlet
   - prohibited_super_call
   - quick_discouraged_call
   - quick_discouraged_focused_test
   - quick_discouraged_pending_test
   - redundant_nil_coalescing
+  - required_enum_case
   - single_test_class
   - sorted_first_last
   - sorted_imports
@@ -50,4 +54,4 @@ opt_in_rules:
   - unneeded_parentheses_in_closure_argument
   - unused_optional_binding
   - vertical_parameter_alignment_on_call
-  
+  - yoda_condition
