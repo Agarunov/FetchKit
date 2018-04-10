@@ -71,7 +71,7 @@ let deleteCount = try? User.deleteAll()
 
 ### Get Distinct
 Fetch dictionaries (instead of managed objects) with specified properties and aggregation functions.
-Result can grouped by properties (SQL GROUP BY)
+Result can be grouped by properties (SQL GROUP BY)
 ```swift
 let result = try User.getDistinct()
     .propertiesToFetch([\User.firstName])
