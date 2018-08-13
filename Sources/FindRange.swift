@@ -14,7 +14,7 @@ open class FindRange<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     // MARK: - Properties
     
     /// Fetch range. Sets `NSFetchRequest` `fetchLimit` and `fetchOffset`
-    open let range: Range<Int>
+    public let range: Range<Int>
     
     // MARK: - Init
     

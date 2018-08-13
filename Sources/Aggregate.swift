@@ -14,10 +14,10 @@ open class Aggregate<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     // MARK: - Properties
     
     /// Fetch aggregation property
-    open let property: String
+    public let property: String
     
     /// Fetch aggregation function
-    open let function: String
+    public let function: String
     
     // MARK: - Init
     

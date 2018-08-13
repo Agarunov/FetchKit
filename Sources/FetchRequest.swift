@@ -15,7 +15,7 @@ open class FetchRequest<ModelType: NSManagedObject> {
     // MARK: - Properties
     
     /// The name of the entity the request is configured to fetch.
-    open let entityName: String
+    public let entityName: String
     
     /// Sort descriptors used by fetch request
     open internal(set) var sortDescriptors: [NSSortDescriptor]
