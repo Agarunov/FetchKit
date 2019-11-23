@@ -1,12 +1,14 @@
 Pod::Spec.new do |spec|
   spec.name         = 'FetchKit'
-  spec.version      = '1.4.0'
+  spec.version      = '1.4.1'
   spec.license      = { :type => 'BSD' }
   spec.homepage     = 'https://github.com/Agarunov/FetchKit'
   spec.authors      = { 'Anton Agarunov' => 'agarunov.anton@gmail.com' }
   spec.summary      = 'Lightweight Core Data fetch framework'
   spec.source       = { :git => 'https://github.com/Agarunov/FetchKit.git', :tag => "#{spec.version}" }
   spec.module_name  = 'FetchKit'
+
+  spec.swift_version = '5.1'
 
   spec.ios.deployment_target  = '8.0'
   spec.osx.deployment_target  = '10.9'

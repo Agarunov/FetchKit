@@ -21,7 +21,7 @@ open class DeleteAll<ModelType: NSManagedObject>: FetchRequest<ModelType> {
     /// - throws: Core Data error if fetch fails    
     @discardableResult
     open func execute(in context: NSManagedObjectContext) throws -> Int {
-        if #available(iOS 9.0, tvOS 9.0, watchOS 2.0, macOS 10.11, *) {
+        if #available(iOS 9.0, watchOS 2.0, macOS 10.11, *) {
             let request: NSFetchRequest<NSFetchRequestResult> = buildFetchRequest()
             let batchRequest = NSBatchDeleteRequest(fetchRequest: request)
             batchRequest.resultType = .resultTypeCount

@@ -6,10 +6,16 @@ disabled_rules:
   
 opt_in_rules:
   - array_init
+  - anyobject_protocol
   - attributes
   - closure_end_indentation
+  - closure_body_length
   - closure_spacing
+  - collection_alignment
   - conditional_returns_on_newline
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_range_nil_comparison
   - contains_over_first_not_nil
   - convenience_type
   - discouraged_optional_boolean
@@ -24,10 +30,12 @@ opt_in_rules:
   - fatal_error_message
   - file_header
   - first_where
+  - flatmap_over_map_reduce
   - function_default_parameter_at_end
   - implicit_return
   - implicitly_unwrapped_optional
   - joined_default_parameter
+  - last_where
   - let_var_whitespace
   - literal_expression_end_indentation
   - lower_acl_than_parent
@@ -47,6 +55,7 @@ opt_in_rules:
   - private_action
   - private_outlet
   - prohibited_super_call
+  - reduce_into
   - redundant_set_access_control
   - quick_discouraged_call
   - quick_discouraged_focused_test
